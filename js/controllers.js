@@ -62,13 +62,118 @@ music.controller('UploadCtrl', ['$scope', function ($scope){
 
 music.controller('HomeCtrl', ['$scope', 'audioService', 'homeService', function ($scope, audioService, homeService){
 
-    homeService.getMusicList().then(function (data){
-        $scope.musicList = data;
-    });
+    $scope.musicList = [
+        {
+            "id": "42",
+            "singer": "凤凰传奇",
+            "playtimes": "52887",
+            "name": "最炫民族风",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "14",
+            "num": 1
+        },
+        {
+            "id": "71",
+            "singer": "陈奕迅",
+            "playtimes": "2032",
+            "name": "好久不见",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "10",
+            "num": 2
+        },
+        {
+            "id": "122",
+            "singer": "Eminem",
+            "playtimes": "1687",
+            "name": "Fack",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 3
+        },
+        {
+            "id": "21",
+            "singer": "刘佳 SARA",
+            "playtimes": "1191",
+            "name": "爱很美",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "4",
+            "num": 4
+        },
+        {
+            "id": "8703",
+            "singer": "周天然",
+            "playtimes": "975",
+            "name": "戴着面具的谜团",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 5
+        },
+        {
+            "id": "188",
+            "singer": "牛奶咖啡",
+            "playtimes": "830",
+            "name": "明天你好",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 6
+        },
+        {
+            "id": "9297",
+            "singer": "Lorde",
+            "playtimes": "599",
+            "name": "Royals",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 7
+        },
+        {
+            "id": "1800",
+            "singer": "张韶涵",
+            "playtimes": "551",
+            "name": "看得最的地方",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 8
+        },
+        {
+            "id": "8704",
+            "singer": "王麟",
+            "playtimes": "499",
+            "name": "思密达",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 9
+        },
+        {
+            "id": "7145",
+            "singer": "初音未来",
+            "playtimes": "498",
+            "name": "初音ミクの消失",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 10
+        }
+    ];
 
-    homeService.getRankFour().then(function (data){
-        $scope.musicRank = data;
-    });
+    $scope.musicRank = $scope.musicList;
+
+    // homeService.getMusicList().then(function (data){
+    //     $scope.musicList = data;
+    // });
+
+    // homeService.getRankFour().then(function (data){
+    //     $scope.musicRank = data;
+    // });
 
     $scope.playMusic = function (){
         audioService.playMusic();
@@ -77,16 +182,120 @@ music.controller('HomeCtrl', ['$scope', 'audioService', 'homeService', function 
 }]);
 
 music.controller('TalkCtrl', ['$scope', 'talkService', function ($scope, talkService){
+    $scope.lastMood = [
+        {
+            "id": "42",
+            "singer": "凤凰传奇",
+            "playtimes": "52887",
+            "name": "最炫民族风",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "14",
+            "num": 1
+        },
+        {
+            "id": "71",
+            "singer": "陈奕迅",
+            "playtimes": "2032",
+            "name": "好久不见",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "10",
+            "num": 2
+        },
+        {
+            "id": "122",
+            "singer": "Eminem",
+            "playtimes": "1687",
+            "name": "Fack",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 3
+        },
+        {
+            "id": "21",
+            "singer": "刘佳 SARA",
+            "playtimes": "1191",
+            "name": "爱很美",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "4",
+            "num": 4
+        },
+        {
+            "id": "8703",
+            "singer": "周天然",
+            "playtimes": "975",
+            "name": "戴着面具的谜团",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 5
+        },
+        {
+            "id": "188",
+            "singer": "牛奶咖啡",
+            "playtimes": "830",
+            "name": "明天你好",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 6
+        },
+        {
+            "id": "9297",
+            "singer": "Lorde",
+            "playtimes": "599",
+            "name": "Royals",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 7
+        },
+        {
+            "id": "1800",
+            "singer": "张韶涵",
+            "playtimes": "551",
+            "name": "看得最的地方",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 8
+        },
+        {
+            "id": "8704",
+            "singer": "王麟",
+            "playtimes": "499",
+            "name": "思密达",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 9
+        },
+        {
+            "id": "7145",
+            "singer": "初音未来",
+            "playtimes": "498",
+            "name": "初音ミクの消失",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 10
+        }
+    ];
 
-    talkService.getLastMood().then(function (data){
-        $scope.lastMood = data;
-        console.log(data);
-    });
+    $scope.lastMusic = $scope.lastMood;
 
-    talkService.lastMusic().then(function (data){
-        $scope.lastMusic = data;
-        console.log(data);
-    });
+    // talkService.getLastMood().then(function (data){
+    //     $scope.lastMood = data;
+    //     console.log(data);
+    // });
+
+    // talkService.lastMusic().then(function (data){
+    //     $scope.lastMusic = data;
+    //     console.log(data);
+    // });
 }]);
 
 music.controller('PlayCtrl', ['$scope', '$rootScope', 'audioService', function ($scope, $rootScope, audioService){
@@ -162,21 +371,129 @@ music.controller('PlayCtrl', ['$scope', '$rootScope', 'audioService', function (
 music.controller('RankCtrl', ['$scope', 'audioService', 'rankService', '$interval', function ($scope, audioService, rankService, $interval){
 
     var categoryRankList = [];
-    $scope.getRank = function (){
-        for(var i=0; i<5; i++){
-            !(function (i){
-                rankService.getRankList(i).then(function (data){
-                    categoryRankList.push(data);
-                    if(i==0){
-                        $scope.cateRankOne = categoryRankList[i];
-                    }else if(i==2){
-                        $scope.cateRankTwo = categoryRankList[i];
-                    }
-                });
-            })(i);
+
+    var list = [
+        {
+            "id": "42",
+            "singer": "凤凰传奇",
+            "playtimes": "52887",
+            "name": "最炫民族风",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "14",
+            "num": 1
+        },
+        {
+            "id": "71",
+            "singer": "陈奕迅",
+            "playtimes": "2032",
+            "name": "好久不见",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "10",
+            "num": 2
+        },
+        {
+            "id": "122",
+            "singer": "Eminem",
+            "playtimes": "1687",
+            "name": "Fack",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 3
+        },
+        {
+            "id": "21",
+            "singer": "刘佳 SARA",
+            "playtimes": "1191",
+            "name": "爱很美",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "4",
+            "num": 4
+        },
+        {
+            "id": "8703",
+            "singer": "周天然",
+            "playtimes": "975",
+            "name": "戴着面具的谜团",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 5
+        },
+        {
+            "id": "188",
+            "singer": "牛奶咖啡",
+            "playtimes": "830",
+            "name": "明天你好",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 6
+        },
+        {
+            "id": "9297",
+            "singer": "Lorde",
+            "playtimes": "599",
+            "name": "Royals",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 7
+        },
+        {
+            "id": "1800",
+            "singer": "张韶涵",
+            "playtimes": "551",
+            "name": "看得最的地方",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 8
+        },
+        {
+            "id": "8704",
+            "singer": "王麟",
+            "playtimes": "499",
+            "name": "思密达",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 9
+        },
+        {
+            "id": "7145",
+            "singer": "初音未来",
+            "playtimes": "498",
+            "name": "初音ミクの消失",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 10
         }
+    ];
+    for(var i=0; i<5; i++){
+        categoryRankList[i] = list;
     }
-    $scope.getRank();
+    $scope.cateRankOne = $scope.cateRankTwo = list;
+
+    // $scope.getRank = function (){
+    //     for(var i=0; i<5; i++){
+    //         !(function (i){
+    //             rankService.getRankList(i).then(function (data){
+    //                 categoryRankList.push(data);
+    //                 if(i==0){
+    //                     $scope.cateRankOne = categoryRankList[i];
+    //                 }else if(i==2){
+    //                     $scope.cateRankTwo = categoryRankList[i];
+    //                 }
+    //             });
+    //         })(i);
+    //     }
+    // }
+    // $scope.getRank();
 
     $scope.category = [1,2,3,4,5];
     $scope.cateListOne = 1;
@@ -202,67 +519,104 @@ music.controller('RankCtrl', ['$scope', 'audioService', 'rankService', '$interva
 music.controller('SearchCtrl', ['$scope', function ($scope){
     $scope.musicResult = [
         {
-            'id': '01',
-            'name': '红尘客栈',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "42",
+            "singer": "凤凰传奇",
+            "playtimes": "52887",
+            "name": "最炫民族风",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "14",
+            "num": 1
         },
-
         {
-            'id': '02',
-            'name': '龙卷风',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "71",
+            "singer": "陈奕迅",
+            "playtimes": "2032",
+            "name": "好久不见",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "10",
+            "num": 2
         },
-
         {
-            'id': '03',
-            'name': '红尘客栈',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "122",
+            "singer": "Eminem",
+            "playtimes": "1687",
+            "name": "Fack",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 3
         },
-
         {
-            'id': '04',
-            'name': '红尘客栈',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "21",
+            "singer": "刘佳 SARA",
+            "playtimes": "1191",
+            "name": "爱很美",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "4",
+            "num": 4
         },
-
         {
-            'id': '05',
-            'name': '红尘客栈',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "8703",
+            "singer": "周天然",
+            "playtimes": "975",
+            "name": "戴着面具的谜团",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 5
         },
-
         {
-            'id': '06',
-            'name': '红尘客栈',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "188",
+            "singer": "牛奶咖啡",
+            "playtimes": "830",
+            "name": "明天你好",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 6
         },
-
         {
-            'id': '07',
-            'name': '红尘客栈',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "9297",
+            "singer": "Lorde",
+            "playtimes": "599",
+            "name": "Royals",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "0",
+            "num": 7
         },
-
         {
-            'id': '08',
-            'name': '红尘客栈',
-            'songer':'周杰伦',
-            'url': 'songs/Nice.mp3',
-            'img': 'search.jpg'
+            "id": "1800",
+            "singer": "张韶涵",
+            "playtimes": "551",
+            "name": "看得最的地方",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 8
+        },
+        {
+            "id": "8704",
+            "singer": "王麟",
+            "playtimes": "499",
+            "name": "思密达",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "3",
+            "num": 9
+        },
+        {
+            "id": "7145",
+            "singer": "初音未来",
+            "playtimes": "498",
+            "name": "初音ミクの消失",
+            "url": "songs/July.mp3",
+            "src": "images/release.jpg",
+            "searchtimes": "1",
+            "num": 10
         }
     ];
 }]);
